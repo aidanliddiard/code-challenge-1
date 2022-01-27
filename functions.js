@@ -31,7 +31,8 @@ Output:
 */
 
 export function multiplyBySeven(num) {
-    return true;
+    const result = num * 7;
+    return result;
 }
 
 // This function should take in a number and multiply it by twelve then cut the result in half
