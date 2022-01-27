@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { 
-    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray,
+    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray, returnAsAString,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -99,13 +99,53 @@ test('24, 6, 10 should be 40', (expect) => {
     expect.equal(actual, expected);
 });
 
-test((expect) =>{
+test('return 1,2,3 as an array', (expect) => {
     const expected = [1, 2, 3];
 
     const actual = returnAsAnArray(1, 2, 3);
 
-    expect.equal(actual, expected);
+    expect.deepEqual(actual, expected);
 });
+
+test('return 4,5,6 as an array', (expect) => {
+    const expected = [4, 5, 6];
+
+    const actual = returnAsAnArray(4, 5, 6);
+
+    expect.deepEqual(actual, expected);
+});
+
+test('return a,b,c as an array', (expect) => {
+    const expected = ['a', 'b', 'c'];
+
+    const actual = returnAsAnArray('a', 'b', 'c');
+
+    expect.deepEqual(actual, expected);
+});
+
+test('return 1,2,3 as an string', (expect) => {
+    const expected = '123';
+
+    const actual = returnAsAString(1, 2, 3);
+
+    expect.deepEqual(actual, expected);
+});
+test('return 4,5,6 as an string', (expect) => {
+    const expected = '456';
+
+    const actual = returnAsAString(4, 5, 6);
+
+    expect.deepEqual(actual, expected);
+});
+test('return a,b,c as an string', (expect) => {
+    const expected = 'abc';
+
+    const actual = returnAsAString('a', 'b', 'c');
+
+    expect.deepEqual(actual, expected);
+});
+
+
 
 // skip('this test should be skipped', (expect) => {
 //     const expected = true;
