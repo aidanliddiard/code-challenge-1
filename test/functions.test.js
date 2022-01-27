@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { 
-    addExclamationPoints, divideThenMultiply, getSecondItem, makeLuckyGreeting, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray, returnAsAString,
+    addExclamationPoints, divideThenMultiply, getLastItem, getSecondItem, makeLuckyGreeting, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray, returnAsAString,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -192,6 +192,33 @@ test('3', (expect) => {
 
     expect.equal(actual, expected);
 });
+
+test('plum', (expect) => {
+    const expected = 'plum';
+
+    const actual = getLastItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.equal(actual, expected);
+
+});
+
+test('kiwi', (expect) => {
+    const expected = 'kiwi';
+
+    const actual = getLastItem(['kiwi']);
+
+    expect.equal(actual, expected);
+});
+
+test('sudoku', (expect) => {
+    const expected = 'sudoku';
+
+    const actual = getLastItem(['monopoly', 'clue', 'caatan', 'sudoku']);
+
+    expect.equal(actual, expected);
+});
+
+
 // skip('this test should be skipped', (expect) => {
 //     const expected = true;
 

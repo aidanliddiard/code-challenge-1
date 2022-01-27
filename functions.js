@@ -156,7 +156,9 @@ Output:
 */
 
 export function getLastItem(array) {
-    return true;
+    const lastItem = array[array.length - 1];
+    
+    return lastItem;
 }
 
 // Bonus question:
@@ -168,5 +170,8 @@ export function getLastItem(array) {
 // Ask yourself: even if you cannot predict the result exactly, what _do_ you know about what it should return? Use that expectation to write your test
 
 export function getRandomNumber() {
-    return true;
+    const random = Math.floor(Math.random() * 5);
+    const array = [0, 1, 2, 3, 4, 5];
+    const result = array[random];
+    return result;
 }
