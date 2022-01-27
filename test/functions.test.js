@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { 
-    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray, returnAsAString,
+    addExclamationPoints, divideThenMultiply, getSecondItem, makeLuckyGreeting, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray, returnAsAString,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -145,8 +145,53 @@ test('return a,b,c as an string', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
+test('greeting lucky number 12', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 12.';
 
+    const actual = makeLuckyGreeting(8, 4);
 
+    expect.equal(actual, expected);
+});
+
+test('greeting lucky number 69', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 69.';
+
+    const actual = makeLuckyGreeting(60, 9);
+
+    expect.equal(actual, expected);
+});
+
+test('greeting lucky number 3', (expect) => {
+    const expected = 'Hello! Your lucky number for the day is 3.';
+
+    const actual = makeLuckyGreeting(1, 2);
+
+    expect.equal(actual, expected);
+});
+
+test('apple', (expect) => {
+    const expected = 'apple';
+
+    const actual = getSecondItem(['kiwi', 'apple', 'orange', 'plum']);
+
+    expect.equal(actual, expected);
+});
+
+test('dog', (expect) => {
+    const expected = 'dog';
+
+    const actual = getSecondItem(['cat', 'dog', 'chimp', 'bird']);
+
+    expect.equal(actual, expected);
+});
+
+test('3', (expect) => {
+    const expected = '3';
+
+    const actual = getSecondItem(['1', '3']);
+
+    expect.equal(actual, expected);
+});
 // skip('this test should be skipped', (expect) => {
 //     const expected = true;
 
