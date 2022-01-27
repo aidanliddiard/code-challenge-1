@@ -1,5 +1,6 @@
 
-// This function should take a string and add return an new string that adds three exclamation points to the argument.
+// This function should take a string and add return an new 
+// string that adds three exclamation points to the argument.
 /* 
 
 Input:
@@ -12,8 +13,9 @@ Output:
 
 */
 
-export function addExclamationPoints() {
-    return true;
+export function addExclamationPoints(string) {
+    const result = string + '!!!';
+    return result;
 }
 
 // This function should take in a number and multiply it by seven
