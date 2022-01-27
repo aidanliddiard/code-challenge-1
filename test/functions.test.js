@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { 
-    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven,
+    addExclamationPoints, divideThenMultiply, multiplyBy12ThenHalve, multiplyBySeven, returnAsAnArray,
 } from '../functions.js';
 
 const { test, skip } = QUnit;
@@ -95,6 +95,14 @@ test('24, 6, 10 should be 40', (expect) => {
     const expected = 40;
 
     const actual = divideThenMultiply(24, 6, 10);
+
+    expect.equal(actual, expected);
+});
+
+test((expect) =>{
+    const expected = [1, 2, 3];
+
+    const actual = returnAsAnArray(1, 2, 3);
 
     expect.equal(actual, expected);
 });
